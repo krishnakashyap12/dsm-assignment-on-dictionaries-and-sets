@@ -1,0 +1,109 @@
+1ans)
+In Python, tuples are ordered collections of elements, which can be of different data types. Tuples have the following characteristics:
+
+Immutable: Tuples are immutable, meaning that once a tuple is created, its contents cannot be changed.
+
+Ordered: The elements in a tuple are ordered, meaning that they are stored in a specific order and can be accessed by their position (index) within the tuple.
+
+Heterogeneous: Tuples can contain elements of different data types, including integers, floats, strings, lists, and even other tuples.
+
+Indexable: Elements in a tuple can be accessed using their index, starting from 0 for the first element.
+
+Iterable: Tuples are iterable, meaning that you can loop through their elements using a for loop or a list comprehension.
+
+Hashable: Tuples are hashable, which means that they can be used as keys in dictionaries and as elements in sets.
+
+Because tuples are immutable, they can be used as keys in dictionaries and as elements in sets, while lists, which are mutable, cannot be used in this way.
+
+
+2ans)
+There are two built-in methods that are available for tuples in Python:
+
+count(): This method returns the number of occurrences of a specified element in a tuple.
+
+Example:
+my_tuple = (1, 2, 3, 4, 5, 1, 2, 3)
+count = my_tuple.count(2)
+print(count)
+output:
+2
+
+index(): This method returns the index of the first occurrence of a specified element in a tuple.
+
+Example:
+my_tuple = (1, 2, 3, 4, 5, 1, 2, 3)
+index = my_tuple.index(3)
+print(index)
+output:
+2
+The reason why tuples have only two built-in methods as compared to lists is that tuples are immutable, and thus do not require as many methods as lists. Lists have several built-in methods for adding, removing, and modifying elements, which is not possible in tuples. Since tuples cannot be modified once created, they only need methods that allow for accessing and counting elements. This simplicity makes tuples more efficient and faster than lists in certain situations.
+
+
+3ans)
+The set data type in Python does not allow duplicate items. We can use a set to remove duplicates from a list as follows:
+
+my_list = [1, 1, 1, 2, 1, 3, 1, 4, 2, 1, 2, 2, 2, 3, 2, 4, 3, 1, 3, 2, 3, 3, 3, 4, 4, 1, 4, 2, 4, 3, 4, 4]
+my_set = set(my_list)
+new_list = list(my_set)
+print(new_list)
+
+4ans)
+sets are collection datatypes that allow only unique items. The union() and update() methods are used to combine two or more sets into a single set. The difference between these two methods lies in how they modify the original set and return the result.
+my_dict = {'apple': 2, 'banana': 4, 'orange': 1}my_dict = {'apple': 2, 'banana': 4, 'orange': 1}
+union() method: The union() method returns a new set containing all the unique elements from all the sets that are specified. The original sets remain unchanged.
+
+Example:
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+set3 = set1.union(set2)
+print(set3)
+
+In the above example, we first define two sets set1 and set2. We then use the union() method to combine these sets into a new set set3. The resulting set contains all the unique elements from both set1 and set2, and neither set1 nor set2 is modified.
+
+update() method: The update() method adds all the unique elements from one or more sets to an existing set. The original set is modified in place.
+
+Example:
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+set1.update(set2)
+print(set1)
+In summary, the union() method returns a new set containing all the unique elements from all the sets that are specified, while the update() method adds all the unique elements from one or more sets to an existing set and modifies it in place.
+
+5ans)
+a dictionary is a collection datatype that stores data as key-value pairs. Each key is unique within the dictionary and is used to access its corresponding value. Dictionaries are also sometimes referred to as associative arrays or hash maps.
+
+my_dict = {'apple': 2, 'banana': 4, 'orange': 1}
+
+Dictionaries are unordered in Python, which means that the order in which the key-value pairs are stored is not guaranteed. However, latest versions allowing dictionaries maintain the order of insertion of key-value pairs. This means that when iterating over a dictionary, the key-value pairs will be returned in the order in which they were added to the dictionary.
+
+
+6ans)
+Yes, in Python we can create nested dictionaries, which are dictionaries that contain other dictionaries as values.
+example:
+my_dict = {'fruits': {'apple': 2, 'banana': 4, 'orange': 1}, 'vegetables': {'carrot': 3, 'spinach': 2, 'potato': 5}}
+
+7ans)
+
+my_dict = {'name': 'John', 'age': 30}
+topics_list = ['Python', 'Machine Learning', 'Deep Learning']
+
+my_dict.setdefault('topics', topics_list)
+
+print(my_dict)
+
+8ans)
+dict1 = {'Sport': 'Cricket' , 'Teams': ['India', 'Australia', 'England', 'South Africa', 'Sri Lanka', 'New Zealand']}
+
+# Get the dict_keys view object
+keys_view = dict1.keys()
+
+# Get the dict_values view object
+values_view = dict1.values()
+
+# Get the dict_items view object
+items_view = dict1.items()
+
+print("Keys view:", keys_view)
+print("Values view:", values_view)
+print("Items view:", items_view)
+
